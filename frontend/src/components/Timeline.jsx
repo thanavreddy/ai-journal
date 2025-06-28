@@ -10,7 +10,7 @@ const Timeline = () => {
   }, [])
 
   const fetchEntries = async () => {
-    const apiUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'
+    const apiUrl = 'https://ai-journal-j26h.onrender.com'
     const res = await axios.get(`${apiUrl}/entries`)
     setEntries(res.data)
   }
