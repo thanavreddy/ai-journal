@@ -7,7 +7,8 @@ const EntryForm = () => {
 
   const handleSubmit = async () => {
     if (!text.trim()) return
-    await axios.post('https://ai-journaling-backend.onrender.com/entry', { text })
+    const apiUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'
+    await axios.post(`${apiUrl}/entry`, { text })
     setText('')
     window.location.reload()
   }

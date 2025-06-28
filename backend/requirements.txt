@@ -6,3 +6,4 @@ openai
 python-dotenv
 gunicorn
 langchain_mistralai
+psycopg2-binary
