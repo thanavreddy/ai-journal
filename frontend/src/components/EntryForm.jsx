@@ -7,7 +7,7 @@ const EntryForm = () => {
 
   const handleSubmit = async () => {
     if (!text.trim()) return
-    const apiUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'
+    const apiUrl = 'https://ai-journal-j26h.onrender.com'
     await axios.post(`${apiUrl}/entry`, { text })
     setText('')
     window.location.reload()
