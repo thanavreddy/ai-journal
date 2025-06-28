@@ -1,0 +1,8 @@
+flask
+flask_sqlalchemy
+flask_cors
+langchain
+openai
+python-dotenv
+gunicorn
+langchain_mistralai
