@@ -14,8 +14,11 @@ load_dotenv()
 app = Flask(__name__)
 app.config.from_object(Config)
 db.init_app(app)
-CORS(app)
-
+CORS(app, origins=[
+    "http://localhost:3000",
+    "http://localhost:5173", 
+    "https://ai-journal-eta.vercel.app"
+])
 os.makedirs(app.instance_path, exist_ok=True)
 
 
